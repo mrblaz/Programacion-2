@@ -1,0 +1,49 @@
+#include <stdio.h> // Consumo electrico.
+
+float calculo_computador();
+float calculo_aire();
+float horasco,horasai,calcu1,calcu2,dias=30,consuco=0.120,consuai=0.130;
+int numho,opci;
+
+int main(){
+
+printf("Cuantas personas hay en el hogar:  ");
+scanf("%d",&numho);
+
+printf("Seleccione una opcion.\n");
+printf("1.-Para consumo por computadoras.\n");
+printf("2.-Para consumo por aires acondicioandos.\n");
+
+scanf("%d",&opci);
+switch (opci){
+case 1:{
+printf("Ingrese un aproximado de horas de uso del computador:  ");
+scanf("%f",&horasco);
+calculo_computador();
+break;
+}
+
+case 2:{
+printf("Ingrese un aproximado de horas de uso de aire acondicionado:  ");
+scanf("%f",&horasai);
+calculo_aire();
+break;
+}
+default: printf("La opcion que usted marco no esta en el menu.\n"); 
+}
+
+
+return calcu1,calcu2;
+}
+
+float calculo_computador(){
+calcu1=horasco*dias*consuco;
+printf("Su deuda en consumo de electricidad por uso de computadoras es: %0.3f Bs\n", calcu1);
+return calcu1;
+}
+
+float calculo_aire(){
+calcu2=horasai*dias*consuai;
+printf("Su deuda en consumo de electricidad por uso de aires acondicionados es: %0.3f Bs\n", calcu2);
+return calcu2;
+}
